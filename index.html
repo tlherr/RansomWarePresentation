@@ -1,49 +1,327 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Adventures with Ransomware</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<meta name="description" content="Adventures with Ransomware">
+	<meta name="author" content="Thomas Herr">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h1>Ransomware</h1>
+			<h3>Having fun with digital extortion</h3>
+			<p>
+				<small>Created by <a href="https://tlherr.com">Thomas Herr</a></small>
+			</p>
+		</section>
+
+		<section>
+			<h2>What is it?</h2>
+			<ul>
+
+			</ul>
+
+			<aside class="notes">
+				Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+			</aside>
+		</section>
+
+		<section>
+			<h2>How does it work?</h2>
+			<ul>
+
+			</ul>
+		</section>
+
+		<section>
+			<h2>How does it spread?</h2>
+			<ul>
+
+			</ul>
+		</section>
+
+		<section data-background="https://media.giphy.com/media/LRVnPYqM8DLag/giphy.gif">
+			<h3>
+				<span class="fragment highlight highlight-red fade-up">What</span>
+				<span class="fragment highlight highlight-red fade-up">could</span>
+				<span class="fragment highlight highlight-red fade-up">possibly</span>
+				<span class="fragment highlight highlight-red fade-up">go</span>
+				<span class="fragment highlight highlight-red fade-up">wrong</span>
+			</h3>
+		</section>
+
+
+		<!-- Example of nested vertical slides -->
+		<section>
+			<section>
+				<h2>Setup</h2>
+				<p>Protect against propagation</p>
+				<p>Have Backups</p>
+				<p>Accept risk of damaged drive</p>
+				<br>
+				<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+			</section>
+			<section>
+				<h2>Precautions</h2>
+				<ul>
+					<li>EXSI</li>
+					<li>Snapshots</li>
+					<li>New Hard Drive</li>
+					<li>Complete Network Disconnect</li>
+				</ul>
+			</section>
+			<section data-markdown>
+				<h2>Malware Samples:</h2>
+				<br>
+				<p>https://github.com/ytisf/theZoo/tree/master/malwares/Binaries</p>
+
+				<ul>
+					<li>Ransomware.Cerber</li>
+					<li>Ransomware.Cryptowall</li>
+					<li>Ransomware.Jigsaw</li>
+					<li>Ransomware.Locky</li>
+					<li>Ransomware.Mamba</li>
+					<li>Ransomware.Matsnu</li>
+					<li>Ransomware.Petrwrap</li>
+					<li>Ransomware.Petya</li>
+					<li>Ransomware.Radamant</li>
+					<li>Ransomware.Rex</li>
+					<li>Ransomware.Satana </li>
+					<li>Ransomware.TeslaCrypt</li>
+					<li>Ransomware.Vipasana</li>
+					<li>Ransomware.WannaCry</li>
+					<li>Ransomware.WannaCry_Plus</li>
+				</ul>
+
+			</section>
+
+			<section>
+				<h2>Testing Hosts</h2>
+				<ul>
+					<li>Windows XP</li>
+					<li>Windows 7</li>
+					<li>Windows 8</li>
+					<li>Linux</li>
+				</ul>
+				<br>
+
+			</section>
+
+
+			<section>
+				<h2>Testing System</h2>
+				<ul>
+					<li>Ryzen 5 1600X</li>
+					<li>32 GB Ram</li>
+					<li>1 TB WD Blue HDD</li>
+				</ul>
+				<br>
+
+				<a href="#/5">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+				</a>
+			</section>
+		</section>
+
+		<section>
+			<h2>Expectations</h2>
+
+		</section>
+
+		<section>
+			<h2>Attack Vectors</h2>
+
+		</section>
+
+		<section>
+			<h2>Attack Setup</h2>
+
+		</section>
+
+		<section>
+			<section>
+				<h2>Attack 1</h2>
+				<p>Variant: WannaCry</p>
+				<br>
+				<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+			</section>
+			<section>
+				<h2>Result</h2>
+
+			</section>
+			<section>
+				<h2>Evidence</h2>
+
+				<br>
+
+				<a href="#/2">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+				</a>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Attack 2</h2>
+				<p>Variant: Cryptowall</p>
+				<br>
+				<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+			</section>
+			<section>
+				<h2>Result</h2>
+
+			</section>
+			<section>
+				<h2>Evidence</h2>
+
+				<br>
+
+				<a href="#/2">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+				</a>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Attack 3</h2>
+				<p>Variant: Linux.Encoder.1</p>
+				<br>
+				<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+			</section>
+			<section>
+				<h2>Result</h2>
+
+			</section>
+			<section>
+				<h2>Evidence</h2>
+
+				<br>
+
+				<a href="#/2">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+				</a>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Attack 4</h2>
+				<p>Variant: Petya</p>
+				<br>
+				<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				</a>
+			</section>
+			<section>
+				<h2>Result</h2>
+
+			</section>
+			<section>
+				<h2>Evidence</h2>
+
+				<br>
+
+				<a href="#/2">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+				</a>
+			</section>
+		</section>
+
+
+		<section>
+			<h1>Mitigation</h1>
+
+		</section>
+
+		<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+			<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+				<h2>References</h2>
+				<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
 			</div>
-		</div>
+		</section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<section style="text-align: left;">
+			<h1>THE END</h1>
+			<h3>Questions?</h3>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+			<p>
+				<a href="https://github.com/hakimel/reveal.js#pdf-export">export PDF</a>
+			</p>
+		</section>
+
+	</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/search/search.js', async: true },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+</body>
 </html>
