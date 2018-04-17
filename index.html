@@ -113,9 +113,6 @@
 			</aside>
 		</section>
 
-
-
-
 		<section>
 			<h2>Our Focus</h2>
 
@@ -169,7 +166,7 @@
 				<h2>Setup</h2>
 				<p>Protect against propagation</p>
 				<p>Have Backups</p>
-				<p>Accept risk of damaged drive</p>
+				<p>Accept risk of a damaged drive</p>
 				<br>
 				<a href="#" class="navigate-down">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
@@ -178,7 +175,7 @@
 			<section>
 				<h2>Precautions</h2>
 				<ul>
-					<li>EXSI</li>
+					<li><strike>EXSI</strike> VMware Workstation</li>
 					<li>Snapshots</li>
 					<li>New Hard Drive</li>
 					<li>Complete Network Disconnect</li>
@@ -219,9 +216,7 @@
 					<li>Linux</li>
 				</ul>
 				<br>
-
 			</section>
-
 
 			<section>
 				<h2>Testing System</h2>
@@ -239,12 +234,42 @@
 		</section>
 
 		<section>
-			<h2>Expectations</h2>
+			<h2>Setup</h2>
 
+			<p>Configure All Windows Hosts to:</p>
+			<ul>
+				<li>ship logs</li>
+				<li>snmp/traps</li>
+			</ul>
+			<p>Windows XP could not setup snmp...</p>
+		</section>
+
+		<section>
+			<h2>Expectations</h2>
+			<ul>
+				<li>Large increase in error messages</li>
+				<li>File I/O errors</li>
+				<li>Not Found Errors</li>
+				<li>Rise in Disk I/O during crypto locking</li>
+			</ul>
 		</section>
 
 		<section>
 			<h2>Attack Vectors</h2>
+
+		</section>
+
+		<section>
+			<h2>Attack Configuration</h2>
+
+			<ul>
+				<li>Start from clean snapshots</li>
+				<li>Bring up router, service machines then hosts</li>
+				<li>Run for 5 mins (get baseline activity etc.)</li>
+				<li>Launch Attack</li>
+				<li>Dump Database for Analysis</li>
+				<li>Capture SNMP monitoring info</li>
+			</ul>
 
 		</section>
 
