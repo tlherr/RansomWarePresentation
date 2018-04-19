@@ -116,18 +116,21 @@
 		<section>
 			<h2>Our Focus</h2>
 
-			<p>NSA Exploit: Eternal Blue</p>
-			<p>Released by Shadow Brokers</p>
 			<p>WannaCryptor aka WannaCry and variants</p>
-
-			<aside class="notes">
-
-			</aside>
+			<p>Modern Ransomware in general</p>
 		</section>
-
 
 		<section>
 			<h2>How does it work?</h2>
+			<ul>
+				<li>Once infected files are encrypted (methods vary)</li>
+				<li>User is prompted for payment to bitcoin address</li>
+				<li>Differing threats</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Popular propagation method</h2>
 			<small>CVE-2017-0144</small>
 
 			<blockquote class="text-sm" style="width: 100%;">
@@ -143,17 +146,9 @@
 			word is an unsigned 16-bit integer</p>
 		</section>
 
-		<section>
-			<h2>How does it spread?</h2>
-			<ul>
-				<li>SMB - TCP Port 445</li>
-				<li>Only requires one infected machine</li>
-				<li>Return of the worm</li>
-			</ul>
-		</section>
 
 		<section>
-			<h2>Lets install it!</h2>
+			<h2>Lets install some!</h2>
 			<ul>
 
 			</ul>
@@ -222,7 +217,6 @@
 					<li>Windows XP</li>
 					<li>Windows 7</li>
 					<li>Windows 8.1</li>
-					<li>Linux (CVE-2017-7494)</li>
 				</ul>
 				<br>
 			</section>
@@ -332,81 +326,73 @@ Host script results:
 			<section>
 				<h2>Setup</h2>
 
-			</section>
-			<section>
-				<h2>Result</h2>
+				<img src="assets/img/wannacry_setup_1.png">
+
 
 			</section>
-			<section>
-				<h2>Evidence</h2>
 
-				<br>
+			<section data-background-image="assets/img/fail_1.png" data-background-size="contain">
+
+			</section>
+
+			<section>
+				<h1>:(</h1>
+			</section>
+
+
+			<section>
+				<h2>Round 2</h2>
+
+				<img src="assets/img/attack_1_result.png">
+			</section>
+
+			<section>
+				<h2>Observations</h2>
+
+				<ul>
+					<li>No other hosts infected</li>
+					<li>Almost no evidence that attack happened</li>
+					<li>All that build up, for what!</li>
+				</ul>
+
+			</section>
+
+			<section data-background-image="assets/img/attack_1_log_results.png" data-background-size="contain">
+
+			</section>
+
+			<section data-background-image="assets/img/attack_1_disk_io.png" data-background-size="contain">
+
+			</section>
+
+
+			<section>
+				<h2>Evidence Summary</h2>
+
+				<ul>
+					<li>No visible evidence that machine was infected</li>
+					<li>Not what I expected</li>
+					<li>Windows SNMP did not have disk IO on by default</li>
+					<li>Is that all you got?</li>
+				</ul>
 
 				<a href="#/2">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
 				</a>
 			</section>
 		</section>
+
+		<section>
+			<h2>That sucked, I wanted destruction!</h2>
+			<p><strong>Petya encrypts a hard drive's file system table and prevents Windows from booting</strong></p>
+			<p>That sounds fun</p>
+		</section>
+
+
 
 		<section>
 			<section>
 				<h2>Attack 2</h2>
-				<p>Variant: Cryptowall</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Setup</h2>
-
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 3</h2>
-				<p>Variant: Linux.Encoder.1</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Setup</h2>
-
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 4</h2>
 				<p>Variant: Petya</p>
 				<br>
 				<a href="#" class="navigate-down">
@@ -414,17 +400,31 @@ Host script results:
 				</a>
 			</section>
 			<section>
-				<h2>Setup</h2>
-
-			</section>
-			<section>
 				<h2>Result</h2>
 
+				<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/9Slu7dmopsA?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 			</section>
+
+			<section data-background-image="assets/img/attack_2_result.png" data-background-size="contain">
+
+			</section>
+
+			<section data-background-image="assets/img/attack_2_alert.png" data-background-size="contain">
+
+			</section>
+
+			<section>
+				<h2>Still no log entries to catch :(</h2>
+			</section>
+
 			<section>
 				<h2>Evidence</h2>
-
-				<br>
+				<ul>
+					<li>Host rebooted (big red flag)</li>
+					<li>Did not come back up after it went down (Even bigger red flag)</li>
+					<li>Still disappointing, none of these have spread to other machines or been as noisy as expected</li>
+				</ul>
 
 				<a href="#/2">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
@@ -432,19 +432,92 @@ Host script results:
 			</section>
 		</section>
 
+		<section>
+			<h2>Disappointment, lets try something else</h2>
+
+			<p>Cerber, Jigsaw, Zerolocker</p>
+		</section>
+
+		<section>
+			<h2>Video (Play Fast Forward)</h2>
+
+			<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/IovXEqSGsT0?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+		</section>
+
+		<section>
+			<h2>Evidence (Cerber)</h2>
+
+			<ul>
+				<li>Next to nothing in terms of evidence</li>
+				<li>Only targeted documents, system files fine</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Evidence (Jigsaw)</h2>
+
+			<ul>
+				<li>Next to nothing in terms of evidence</li>
+				<li>Only targeted documents, system files fine</li>
+				<li>Spikes of Disk IO and CPU while it performs a task</li>
+			</ul>
+		</section>
+
+
+		<section>
+			<h2>Evidence (Zerolocker)</h2>
+
+			<p>My Personal Favourite</p>
+		</section>
+
+
+		<section data-background-image="assets/img/attack_3_disk_io.png" data-background-size="contain">
+
+		</section>
+
+		<section data-background-image="assets/img/attack_3_cipher_disk_io.png" data-background-size="contain">
+
+		</section>
+
+		<section data-background-image="assets/img/attack_3_disk_filling_up.png" data-background-size="contain">
+
+		</section>
+
+		<section data-background-image="assets/img/attack_3_disk_usage_overview.png" data-background-size="contain">
+
+		</section>
+
+
+		<section data-background-image="assets/img/attack_3_90_disk.png" data-background-size="contain">
+
+		</section>
+
+		<section>
+			<h2>Why write so much?</h2>
+
+			<p class="fragment fade-in">Makes recovery much harder</p>
+		</section>
+
 
 		<section>
 			<h1>Mitigation</h1>
 
+			<ul>
+				<li>Updates</li>
+				<li>Reduce Attack Surface (Disable SMB if not in use)</li>
+				<li>Implement monitoring solutions that actually help, not just create noise</li>
+				<li>Have baselines to compare against</li>
+			</ul>
 		</section>
 
-		<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+		<section>
 			<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
 				<h2>References</h2>
 				<ul>
 					<li>https://blog.trendmicro.com/trendlabs-security-intelligence/ms17-010-eternalblue/</li>
 					<li>https://support.eset.com/ca6443/?locale=en_US&viewlocale=en_US</li>
 					<li>https://www.endgame.com/blog/technical-blog/wcrywanacry-ransomware-technical-analysis</li>
+					<li>https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/smb/ms17_010_eternalblue.rb</li>
 				</ul>
 			</div>
 		</section>
@@ -453,9 +526,7 @@ Host script results:
 			<h1>THE END</h1>
 			<h3>Questions?</h3>
 
-			<p>
-				<a href="https://github.com/hakimel/reveal.js#pdf-export">export PDF</a>
-			</p>
+			<img src="assets/img/lolsleep.png">
 		</section>
 
 	</div>
@@ -473,6 +544,7 @@ Host script results:
         progress: true,
         history: true,
         center: true,
+        slideNumber: true,
 
         transition: 'convex', // none/fade/slide/convex/concave/zoom
 
