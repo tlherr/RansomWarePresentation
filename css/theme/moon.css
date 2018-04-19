@@ -11,6 +11,9 @@ html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+.text-sm {
+  font-size: 0.75em !important; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

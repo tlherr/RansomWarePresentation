@@ -70,7 +70,7 @@
 			<p>Asymmetric Encryption usage in attacks in 1996</p>
 
 			<h4>Notable Examples</h4>
-			<table>
+			<table class="text-sm">
 				<thead>
 				<tr>
 					<th>Date</th>
@@ -128,9 +128,19 @@
 
 		<section>
 			<h2>How does it work?</h2>
-			<ul>
+			<small>CVE-2017-0144</small>
 
-			</ul>
+			<blockquote class="text-sm" style="width: 100%;">
+				There is a buffer overflow memmove operation in Srv!SrvOs2FeaToNt. The size
+				is calculated in Srv!SrvOs2FeaListSizeToNt, with mathematical error where a
+				DWORD is subtracted into a WORD. The kernel pool is groomed so that overflow
+				is well laid-out to overwrite an SMBv1 buffer. Actual RIP hijack is later
+				completed in srvnet!SrvNetWskReceiveComplete.
+			</blockquote>
+
+			<p class="text-sm">Kernel functions Srv!SrvOs2FeaToNt and SrvNetWskReceiveComplete serv.sys<br/>
+			dword is an unsigned, 32-bit unit of data<br/>
+			word is an unsigned 16-bit integer</p>
 		</section>
 
 		<section>
@@ -210,26 +220,23 @@
 				<h2>Testing Hosts</h2>
 				<ul>
 					<li>Windows XP</li>
-					<li>Windows Vista</li>
 					<li>Windows 7</li>
-					<li>Windows 8</li>
-					<li>Linux</li>
+					<li>Windows 8.1</li>
+					<li>Linux (CVE-2017-7494)</li>
 				</ul>
 				<br>
 			</section>
 
-			<section>
-				<h2>Testing System</h2>
-				<ul>
-					<li>Ryzen 5 1600X</li>
-					<li>32 GB Ram</li>
-					<li>1 TB WD Blue HDD</li>
-				</ul>
-				<br>
+			<section data-background-image="assets/img/win_xp_version_info.png" data-background-size="contain">
 
-				<a href="#/5">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
+			</section>
+
+			<section data-background-image="assets/img/win_7_version_info.png" data-background-size="contain">
+
+			</section>
+
+			<section data-background-image="assets/img/win_8.1-version_info.png" data-background-size="contain">
+
 			</section>
 		</section>
 
@@ -257,10 +264,16 @@
 		<section>
 			<h2>Attack Vectors</h2>
 
+			<code>
+				auxiliary/scanner/smb/smb_ms17_010
+				exploit/windows/smb/ms17_010_eternalblue
+			</code>
+
+			<p>Email, HTTP Download etc. also work</p>
 		</section>
 
 		<section>
-			<h2>Attack Configuration</h2>
+			<h2>Attack Methodology</h2>
 
 			<ul>
 				<li>Start from clean snapshots</li>
@@ -274,7 +287,36 @@
 		</section>
 
 		<section>
-			<h2>Attack Setup</h2>
+			<h2>Scanning Results</h2>
+
+			<code>
+				nmap -Pn -p 445 --script smb-vuln-ms17-010 192.168.132.0/24
+			</code>
+
+			<pre>
+Host script results:
+| smb-vuln-ms17-010:
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+			</pre>
+
+			<p>Windows 7 (132.7), Windows 8 (132.8)</p>
+
+		</section>
+
+		<section>
+			<h2 style="color:red;">Where is XP?!?!</h2>
+
+			<iframe src="https://giphy.com/embed/5b5OU7aUekfdSAER5I" width="480" height="388" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/snl-saturday-night-live-kenan-thompson-5b5OU7aUekfdSAER5I"></a></p>
+
+		</section>
+
+		<section data-background-image="assets/img/lol_xp_firewall.png" data-background-size="contain">
 
 		</section>
 
@@ -286,6 +328,10 @@
 				<a href="#" class="navigate-down">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
 				</a>
+			</section>
+			<section>
+				<h2>Setup</h2>
+
 			</section>
 			<section>
 				<h2>Result</h2>
@@ -312,6 +358,10 @@
 				</a>
 			</section>
 			<section>
+				<h2>Setup</h2>
+
+			</section>
+			<section>
 				<h2>Result</h2>
 
 			</section>
@@ -334,6 +384,10 @@
 				<a href="#" class="navigate-down">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
 				</a>
+			</section>
+			<section>
+				<h2>Setup</h2>
+
 			</section>
 			<section>
 				<h2>Result</h2>
@@ -360,6 +414,10 @@
 				</a>
 			</section>
 			<section>
+				<h2>Setup</h2>
+
+			</section>
+			<section>
 				<h2>Result</h2>
 
 			</section>
@@ -383,7 +441,11 @@
 		<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
 			<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
 				<h2>References</h2>
-				<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+				<ul>
+					<li>https://blog.trendmicro.com/trendlabs-security-intelligence/ms17-010-eternalblue/</li>
+					<li>https://support.eset.com/ca6443/?locale=en_US&viewlocale=en_US</li>
+					<li>https://www.endgame.com/blog/technical-blog/wcrywanacry-ransomware-technical-analysis</li>
+				</ul>
 			</div>
 		</section>
 
